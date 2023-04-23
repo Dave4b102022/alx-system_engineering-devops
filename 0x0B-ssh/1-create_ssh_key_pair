@@ -4,4 +4,7 @@
 # Number of bits in the created key to be created 4096
 # The created key must be protected by the passphrase betty
 
-ssh-keygen -b 4096 -f school -N betty
+if [ ! -d ~/.ssh ]; then
+    mkdir ~/.ssh
+fi
+ssh-keygen -t rsa -f ~/.ssh/school -N ""
